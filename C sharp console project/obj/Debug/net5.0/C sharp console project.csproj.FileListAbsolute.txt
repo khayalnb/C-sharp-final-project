@@ -1,0 +1,54 @@
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.exe
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.deps.json
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.runtimeconfig.json
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.runtimeconfig.dev.json
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.dll
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\bin\Debug\net5.0\ref\C sharp console project.dll
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.pdb
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.csproj.AssemblyReference.cache
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.AssemblyInfoInputs.cache
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.AssemblyInfo.cs
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.dll
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\obj\Debug\net5.0\ref\C sharp console project.dll
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.pdb
+C:\Users\ASUS\source\repos\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.genruntimeconfig.cache
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.csproj.AssemblyReference.cache
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.AssemblyInfoInputs.cache
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.AssemblyInfo.cs
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.dll
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\ref\C sharp console project.dll
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.pdb
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.exe
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.deps.json
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.runtimeconfig.json
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.runtimeconfig.dev.json
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.dll
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\ref\C sharp console project.dll
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.pdb
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\ConsoleTables.dll
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\EasyConsole.dll
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.csproj.CopyComplete
+C:\Users\ASUS\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.genruntimeconfig.cache
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.exe
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.deps.json
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.runtimeconfig.json
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.runtimeconfig.dev.json
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.dll
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\ref\C sharp console project.dll
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\C sharp console project.pdb
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\ConsoleTables.dll
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\bin\Debug\net5.0\EasyConsole.dll
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.csproj.AssemblyReference.cache
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.AssemblyInfoInputs.cache
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.AssemblyInfo.cs
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.csproj.CopyComplete
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.dll
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\ref\C sharp console project.dll
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.pdb
+C:\Users\ASUS\OneDrive\Desktop\C sharp console project\C sharp console project\obj\Debug\net5.0\C sharp console project.genruntimeconfig.cache
