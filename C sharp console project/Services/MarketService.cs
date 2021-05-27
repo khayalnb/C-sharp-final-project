@@ -19,13 +19,13 @@ namespace C_sharp_console_project.Services
             Sales = new();
         }
         
-        public void AddProduct(string name, double price, int count, string category)
+        public void AddProduct(string productname, double price, int productcount, string category)
         {
             Product product = new();
-            product.ProductName = name;
+            product.ProductName = productname;
             product.Price = price;
             product.Categories = category;
-            product.ProductCount = count;
+            product.ProductCount = productcount;
             Products.Add(product);
         }
         public void ChangeProduct(int a)
@@ -108,11 +108,18 @@ namespace C_sharp_console_project.Services
             return result;
         }
         //Sale Methods
-        public void AddSele(int no, int count)
+        public void AddSele(int no, int count ,Sale sale)
         {
+            SaleItem saleItem = new();
             int index = Products.FindIndex(a => a.No == no);
             var result = Products.ElementAt(index);
             result.ProductCount = result.ProductCount - count;
+            double b = (double)(result.Price * count);
+            sale.SalePrice  += b;
+            saleItem.products = result;
+            saleItem.Quantity += count;
+            sale.Items.Add(saleItem);
+            
         }
     }
 }

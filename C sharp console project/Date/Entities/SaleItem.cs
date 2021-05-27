@@ -13,6 +13,9 @@ namespace C_sharp_console_project.Date.Entities
 
         
         public Product products { get; set; }
+
+        public int Quantity { get; set; }
+        public double SalePrice { get; set; }
         
 
         public  SaleItem()

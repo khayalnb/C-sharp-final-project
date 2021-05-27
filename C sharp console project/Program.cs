@@ -8,12 +8,14 @@ namespace C_sharp_console_project
     {
         static void Main(string[] args)
         {
+
             Console.OutputEncoding = Encoding.UTF8;
             {
+               
 
-                int a = 0;
-                int b = 0;
-                int c = 0;
+                int sl1 = 0;
+                int sl2 = 0;
+                int sl3= 0;
 
                 do
                 {
@@ -21,13 +23,13 @@ namespace C_sharp_console_project
                     Console.WriteLine("1 Mehsullar uzerinde emeliyyat etmek ");
                     Console.WriteLine("2 Satislar uzerinde emeliyyat etmek");
                     Console.WriteLine("3 Sistemden cixis");
-                    Console.WriteLine("Hansi emeliyati etmek isteyirsiniz?");
-                    string stra = Console.ReadLine();
-                    while (!int.TryParse(stra, out a))
+                    Console.WriteLine("Hansi emeliyyati etmek isteyirsiniz?");
+                    string selection = Console.ReadLine();
+                    while (!int.TryParse(selection, out sl1))
                     {
-                        stra = Console.ReadLine();
+                        selection = Console.ReadLine();
                     }
-                    switch (a)
+                    switch (sl1)
                     {
                         case 1:
                             do
@@ -40,14 +42,14 @@ namespace C_sharp_console_project
                                 Console.WriteLine("6 Qiymet araligina gore mehsullari goster");
                                 Console.WriteLine("7 Mehsullar arasinda ada gore axtaris et ");
                                 Console.WriteLine("0-Exit");
-                                Console.WriteLine("Hansı əməliyyati etmək istəyirsən?");
+                                Console.WriteLine("Hansı əməliyyati etmək istəyirsiniz?");
                                 string strb = Console.ReadLine();
-                                while (!int.TryParse(strb, out b))
+                                while (!int.TryParse(strb, out sl2))
                                 {
-                                    Console.WriteLine("Zehmet olmasa nomreni daxil edin");
+                                    Console.WriteLine("Zehmət olmasa nomrəni daxil edin");
                                     strb = Console.ReadLine();
                                 }
-                                switch (b)
+                                switch (sl2)
                                 {
                                     case 1:
                                         MenuService.AddProduct();
@@ -74,27 +76,27 @@ namespace C_sharp_console_project
                                     default:
                                         break;
                                 }
-                            } while (b != 0);
+                            } while (sl2 != 0);
                             break;
                         case 2:
                             do
                             {
-                                Console.WriteLine("1-Add new sales");
-                                Console.WriteLine("2-Return of sale");
-                                Console.WriteLine("3-Delete sale");
-                                Console.WriteLine("4-Display all sale");
-                                Console.WriteLine("5-Display range of date sale");
-                                Console.WriteLine("6-Display range of price sale");
-                                Console.WriteLine("7-Display o the one day sale");
-                                Console.WriteLine("8-Display of No sale");
-                                Console.WriteLine("0-Exit");
-                                Console.WriteLine("=================================");
-                                Console.WriteLine("Which operation do you want to do");
+                                Console.WriteLine("1 Yeni satis elave etmek");
+                                Console.WriteLine("2 Satisdaki hansisa mehsulun geri qaytarilmasi");
+                                Console.WriteLine("3 Satisin silinmesi");
+                                Console.WriteLine("4 Butun satislarin ekrana cixarilmasi");
+                                Console.WriteLine("5 Verilen tarix araligina gore satislarin gosterilmesi");
+                                Console.WriteLine("6 Verilen mebleg araligina gore satislarin gosterilmesi ");
+                                Console.WriteLine("7 Verilmis bir tarixde olan satislarin gosterilmesi");
+                                Console.WriteLine("8 Verilmis nomreye esasen hemin nomreli satisin melumatlarinin gosterilmesi");
+                                Console.WriteLine("0 Çixiş");
+                                Console.WriteLine("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*");
+                                Console.WriteLine("Hansı əməliyyatı etmək istəyirsiniz?");
 
                                 string strc = Console.ReadLine();
-                                while (!int.TryParse(strc, out c))
+                                while (!int.TryParse(strc, out sl3))
                                 {
-                                    Console.WriteLine("Ededi duzgun daxil edin");
+                                    Console.WriteLine("Ədedi duzgun daxil edin");
                                     strc = Console.ReadLine();
                                 }
                                 //switch (c)
@@ -128,14 +130,14 @@ namespace C_sharp_console_project
                                 //}
 
 
-                            } while (c != 0);
+                            } while (sl3 != 0);
                             break;
 
                         default:
                             break;
                     }
 
-                } while (a != 3);
+                } while (sl1 != 3);
             }
         }
 
