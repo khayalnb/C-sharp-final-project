@@ -9,8 +9,6 @@ namespace C_sharp_console_project
     {
         static void Main(string[] args)
         {
-
-            Console.OutputEncoding = Encoding.UTF8;
             {
                
 
@@ -25,10 +23,10 @@ namespace C_sharp_console_project
                     Console.WriteLine("2 Satislar uzerinde emeliyyat etmek");
                     Console.WriteLine("3 Sistemden cixis");
                     Console.WriteLine("Hansi emeliyyati etmek isteyirsiniz?");
-                    string selection = Console.ReadLine();
-                    while (!int.TryParse(selection, out sl1))
+                    string selectionsl1 = Console.ReadLine();
+                    while (!int.TryParse(selectionsl1, out sl1))
                     {
-                        selection = Console.ReadLine();
+                        selectionsl1 = Console.ReadLine();
                     }
                     switch (sl1)
                     {
@@ -44,11 +42,11 @@ namespace C_sharp_console_project
                                 Console.WriteLine("7 Mehsullar arasinda ada gore axtaris et ");
                                 Console.WriteLine("0-Exit");
                                 Console.WriteLine("Hansı əməliyyati etmək istəyirsiniz?");
-                                string strb = Console.ReadLine();
-                                while (!int.TryParse(strb, out sl2))
+                                string selectionsl2 = Console.ReadLine();
+                                while (!int.TryParse(selectionsl2, out sl2))
                                 {
                                     Console.WriteLine("Zehmət olmasa nomrəni daxil edin");
-                                    strb = Console.ReadLine();
+                                    selectionsl2 = Console.ReadLine();
                                 }
                                 switch (sl2)
                                 {
@@ -95,41 +93,41 @@ namespace C_sharp_console_project
                                 Console.WriteLine("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*");
                                 Console.WriteLine("Hansı əməliyyatı etmək istəyirsiniz?");
 
-                                string strc = Console.ReadLine();
-                                while (!int.TryParse(strc, out sl3))
+                                string selectionsl3 = Console.ReadLine();
+                                while (!int.TryParse(selectionsl3, out sl3))
                                 {
                                     Console.WriteLine("Ədedi duzgun daxil edin");
-                                    strc = Console.ReadLine();
+                                    selectionsl3 = Console.ReadLine();
                                 }
-                                //switch (c)
-                                //{
-                                //    case 1:
-                                //        MenuServices.YenisatisElaveEtmek();
-                                //        break;
-                                //    case 2:
-                                //        MenuServices.MehsulunGeriqaytarilmasi();
-                                //        break;
-                                //    case 3:
-                                //        MenuServices.SatisinSilinmesi();
-                                //        break;
-                                //    case 4:
-                                //        MenuServices.UmumiSatisinQaytarilmasi();
-                                //        break;
-                                //    case 5:
-                                //        MenuServices.TarixeGoreTapmaq();
-                                //        break;
-                                //    case 6:
-                                //        MenuServices.QiymeteGoreTapmaq();
-                                //        break;
-                                //    case 7:
-                                //        MenuServices.TekZamanGoreSatisinTapilmasi();
-                                //        break;
-                                //    case 8:
-                                //        MenuServices.NomreyeGoreTapmaq();
-                                //        break;
-                                //    default:
-                                //        break;
-                                //}
+                                switch (sl3)
+                                {
+                                    case 1:
+                                        MenuService.AddSale();
+                                        break;
+                                    case 2:
+                                        MenuService.ReturnOfProduct();
+                                        break;
+                                    case 3:
+                                        MenuService.DeleteSale();
+                                        break;
+                                    case 4:
+                                        MenuService.AllSaleView();
+                                        break;
+                                    case 5:
+                                        MenuService.RangeOfDateSale();
+                                        break;
+                                    case 6:
+                                        MenuService.RangeOfPriceSale();
+                                        break;
+                                    case 7:
+                                        MenuService.OneDaySale();
+                                        break;
+                                    case 8:
+                                        MenuService.TheNoSale();
+                                        break;
+
+                                }
+                                
 
 
                             } while (sl3 != 0);
@@ -146,4 +144,3 @@ namespace C_sharp_console_project
     }
 }
 
-Q

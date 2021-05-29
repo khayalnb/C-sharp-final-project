@@ -320,7 +320,7 @@ namespace C_sharp_console_project.Services
             }
             marketservice.ReturnofProduct(no,name,count); 
         }     
-        public void DeleteSale()
+        public static void DeleteSale()
         {
             int no = 0;
             var table = new ConsoleTable("No", "Price", "Count", "Date");
