@@ -6,18 +6,24 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace C_sharp_console_project.Date.Entities
-{
-    public class Sale:SaleItem
+{ 
+    class Sale:SaleItem
     {
-        public double Cost { get; set; }
-        public List<SaleItem> Items { get; set; }
+        private static int count = 0;
+
+        
+        public double Price { get; set; }
         public DateTime Date { get; set; }
+        public List<SaleItem> Items { get; set; }
+       
 
         public Sale()
         {
+            Date = DateTime.Now;
+            Items = new();
             count++;
             No = count;
-            Date = DateTime.Now;
+            
         }
 
         

@@ -34,12 +34,12 @@ namespace C_sharp_console_project.Date.Entities
         {
 
         }
-        public void SearchforNameproduct(string Name)
+        public void SearchforNameproduct(string ProductName)
         {
 
         }
         //Sale
-        public void Addnewsales()
+        public void AddSale()
         {
 
 

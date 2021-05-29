@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace C_sharp_console_project.Services
 {
-    public class MarketService:IMarketable
+    class MarketService:IMarketable
     {
         //Product Methods
         public List<Product> Products { get; set; }
@@ -19,7 +19,7 @@ namespace C_sharp_console_project.Services
             Sales = new();
         }
         
-        public void AddProduct(string productname, double price, int productcount, string category)
+        public void AddProduct(string productname, double price, int productcount, Category category)
         {
             Product product = new();
             product.ProductName = productname;
@@ -58,8 +58,36 @@ namespace C_sharp_console_project.Services
                         break;
                     case 2:
                         Console.WriteLine("Enter new category");
-                        string newcategory = Console.ReadLine();
-                        change.Categories = newcategory;
+                        Console.WriteLine("Categories");
+                        int index = 1;
+                        foreach(var item in Enum.GetValues(typeof(Category)))
+                        {
+                            Console.WriteLine($"{index}.{item}");
+                            index++;
+
+                        }
+                        int pick = Convert.ToInt32(Console.ReadLine());
+                        Category sort = new();
+                        switch (pick)
+                        {
+                            case (int)Category.Cake:
+                                sort = Category.Cake;
+                                break;
+                            case(int)Category.Chocolate:
+                                sort = Category.Chocolate;
+                                break;
+                            case (int)Category.Drink:
+                                sort = Category.Drink;
+                                break;
+                            case (int)Category.Fruit:
+                                sort = Category.Fruit;
+                                break;
+                            case (int)Category.Tea:
+                                sort = Category.Tea;
+                                break;
+                            default:
+                                break;
+                        }
                         break;
                     case 3:
                         Console.WriteLine("Enter new price");
@@ -92,7 +120,7 @@ namespace C_sharp_console_project.Services
             int index = Products.FindIndex(a => a.No == no);
             Products.RemoveAt(index);
         }
-        public List<Product> SerchforCategoryProduct(string category)
+        public List<Product> SerchforCategoryProduct(Category category)
         {
             var result = Products.FindAll(a => a.Categories == category);
             return result;
@@ -108,18 +136,57 @@ namespace C_sharp_console_project.Services
             return result;
         }
         //Sale Methods
-        public void AddSele(int no, int count ,Sale sale)
+        public void AddSale(int no, int count ,Sale sale)
         {
             SaleItem saleItem = new();
+
             int index = Products.FindIndex(a => a.No == no);
             var result = Products.ElementAt(index);
             result.ProductCount = result.ProductCount - count;
             double b = (double)(result.Price * count);
-            sale.SalePrice  += b;
+            sale.Price  += b;
             saleItem.products = result;
             saleItem.Quantity += count;
             sale.Items.Add(saleItem);
             
         }
+        public void ReturnofProduct(int no, string name, int count)
+        {
+            Sale sale = Sales.FirstOrDefault(a => a.No == no);
+            SaleItem saleitem = sale.Items.FirstOrDefault(a => a.Quantity >= count);
+            Product product = Products.FirstOrDefault(a => a.ProductName == name);
+            sale.Items.Remove(saleitem);
+            product.ProductCount += count;
+            sale.Price -= product.Price * count;
+            saleitem.Quantity -= count;
+            sale.Items.Add(saleitem);
+
+        }
+        public void DeleteSale(int no)
+        {
+            int index = Sales.FindIndex(a => a.No == no);
+            Sales.RemoveAt(index);
+        }
+        public List<Sale> RangeOfDateSale(DateTime dates,DateTime datee)
+        {
+            var result = Sales.FindAll(a => a.Date >= dates && a.Date <= datee);
+            return result.ToList();
+        }
+        public List<Sale> RangeOfPriceSale(double price1,double price2)
+        {
+            var result = Sales.FindAll(a => a.Price >= price1 && a.Price <= price2);
+            return result.ToList();
+        }
+        public List<Sale> OneDayDale(DateTime day)
+        {
+            var result = Sales.FindAll(a => a.Date.Day == day.Day && a.Date.Month == day.Month && a.Date.Year == day.Year); 
+            return result.ToList();
+        }
+        public List<Sale> TheNoSale(int no)
+        {
+            var result = Sales.FindAll(a => a.No == no);
+            return result.ToList();
+        }
+
     }
 }

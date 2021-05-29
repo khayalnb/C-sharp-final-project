@@ -1,4 +1,5 @@
-﻿using C_sharp_console_project.Services;
+﻿using C_sharp_console_project.Date.Entities;
+using C_sharp_console_project.Services;
 using System;
 using System.Text;
 
@@ -65,6 +66,7 @@ namespace C_sharp_console_project
                                         break;
                                     case 5:
                                         MenuService.SerachforCategoryproduct();
+
                                         break;
                                     case 6:
                                         MenuService.SearchforPricCeProduct();
@@ -144,3 +146,4 @@ namespace C_sharp_console_project
     }
 }
 
+Q
