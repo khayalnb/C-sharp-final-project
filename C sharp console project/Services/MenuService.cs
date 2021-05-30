@@ -28,7 +28,7 @@ namespace C_sharp_console_project.Services
             string pricestr = Console.ReadLine();
             while (!double.TryParse(pricestr, out price))
             {
-                Console.WriteLine("Please enter the correct number: ");
+                Console.WriteLine("Zehmet olmasa duzgun nomreni daxil edin");
                 pricestr = Console.ReadLine();
             }
             Console.WriteLine("Zehmet olmasa mehsulun kategoriyasın daxil edin:");
@@ -68,11 +68,11 @@ namespace C_sharp_console_project.Services
                 default:
                     break;
             }
-            Console.WriteLine("Please enter products count");
+            Console.WriteLine("Zehmet olmasa mehsul sayını daxil edin");
             string countstr = Console.ReadLine();
             while (!Int32.TryParse(countstr, out count))
             {
-                Console.WriteLine("Please enter the correct number");
+                Console.WriteLine("Zehmet olmasa duzgun nomreni daxil edin");
                 countstr = Console.ReadLine();
             }
             marketservice.AddProduct(name, price, count, sort);
@@ -90,11 +90,11 @@ namespace C_sharp_console_project.Services
             }
             table.Write();
             Console.WriteLine();
-            Console.WriteLine("Which the change product No ");
+            Console.WriteLine("Deyisdirmek istediyiniz mehsulun No-sun secin: ");
             string codestr = Console.ReadLine();
             while (!int.TryParse(codestr, out code))
             {
-                Console.WriteLine("Please enter number correct:");
+                Console.WriteLine("Zehmet olmasa duzgun nomreni daxil edin:");
                 codestr = Console.ReadLine();
             }
 
@@ -110,11 +110,11 @@ namespace C_sharp_console_project.Services
             }
             table.Write();
             Console.WriteLine();
-            Console.WriteLine("Please write the delete product No:");
+            Console.WriteLine("Zehmet olmasa silmek istediyiniz mehsulun No-sun secin:");
             string strno = Console.ReadLine();
             while (!int.TryParse(strno, out no))
             {
-                Console.WriteLine("Please enter number correctly:");
+                Console.WriteLine("Zehmet olmasa duzgun nomreni daxil edin:");
                 strno = Console.ReadLine();
             }
             marketservice.ClearProduct(no);
@@ -141,11 +141,11 @@ namespace C_sharp_console_project.Services
 
             }
             int pick = 0;
-            Console.WriteLine("Please select category");
+            Console.WriteLine("Zehmet olmasa kateqoriyani secin");
             string strpick = Console.ReadLine();
             while (!int.TryParse(strpick, out pick))
             {
-                Console.WriteLine("Please enter the correct numer");
+                Console.WriteLine("Zehmet olmasa duzgun nomreni daxil edin");
                 strpick = Console.ReadLine();
             }
             Category sort = new();
@@ -189,19 +189,19 @@ namespace C_sharp_console_project.Services
         {
             double startprice = 0;
             double endprice = 0;
-            Console.WriteLine("Please enter the start price:");
+            Console.WriteLine("Zehmet olmasa baslanqic meblegi daxil edin:");
             string strstartprice = Console.ReadLine();
 
             while (!double.TryParse(strstartprice, out startprice))
             {
-                Console.WriteLine("Please enter the number correctly:");
+                Console.WriteLine("Zehmet olmasa meblegi duzgun daxil edin:");
                 strstartprice = Console.ReadLine();
             }
-            Console.WriteLine("please enter the end price:");
+            Console.WriteLine("Zehmet olmasa son deyer meblegin daxil edin:");
             string strendprice = Console.ReadLine();
             while (!double.TryParse(strendprice, out endprice))
             {
-                Console.WriteLine("Please enter the number correctly:");
+                Console.WriteLine("Zehmet olmasa meblegi duzgun daxil edin:");
                 strendprice = Console.ReadLine();
             }
             var table = new ConsoleTable("No", "Name", "Category", "Price", "Count");
@@ -215,7 +215,7 @@ namespace C_sharp_console_project.Services
         public static void SearchforNameProduct()
         {
             var table = new ConsoleTable("No", "Name", "Category", "Price", "Count");
-            Console.WriteLine("Please enter the product name:");
+            Console.WriteLine("Zehmet olmasa mehsulun adin daxil edin:");
             string name = Console.ReadLine();
             foreach (var products in marketservice.SearchforNameProduct(name))
             {
@@ -302,20 +302,20 @@ namespace C_sharp_console_project.Services
             }
             table.Write();
             Console.WriteLine();
-            Console.WriteLine("Please enter the return sale NO");
+            Console.WriteLine("Zehmet olmasa qaytarmaq istediyiniz satisin NO-sun daxil edin");
             string strno = Console.ReadLine();
             while (!int.TryParse(strno, out no))
             {
-                Console.WriteLine("Please enter the correct NO");
+                Console.WriteLine("Zehmet olmasa nomreni duzgun daxil edin");
                 strno = Console.ReadLine();
             }
-            Console.WriteLine("Please write the return product name ");
+            Console.WriteLine("Zehmet olmasa qaytarmaq istediyiniz mehsulun adin daxil edin ");
             string name = Console.ReadLine();
-            Console.WriteLine("Please enter the return product count ");
+            Console.WriteLine("Zehmet olmasa qaytarmaq istediyiniz mehsulun sayin daxil edin");
             string strcount = Console.ReadLine();
             while (!int.TryParse(strcount, out count))
             {
-                Console.WriteLine("Please enter the correct count");
+                Console.WriteLine("Zehmet olmasa duzgun say daxil edin");
                 strcount = Console.ReadLine();
             }
             marketservice.ReturnofProduct(no,name,count); 
@@ -330,11 +330,11 @@ namespace C_sharp_console_project.Services
             }
             table.Write();
             Console.WriteLine();
-            Console.WriteLine("Please write the delete sale No");
+            Console.WriteLine("Zehmet olmasa silmek istediyiniz satisin  No-sun daxil edin:");
             string strno = Console.ReadLine();
             while (!int.TryParse(strno, out no))
             {
-                Console.WriteLine("Please enter the number correctly");
+                Console.WriteLine("Zehmet olmasa nomreni duzgun daxil edin");
                 strno = Console.ReadLine();
             }
             marketservice.DeleteSale(no);
@@ -352,9 +352,9 @@ namespace C_sharp_console_project.Services
         }
         public static void RangeOfDateSale()
         {
-            Console.WriteLine("Please enter time (dd.mm.yyyy)");
+            Console.WriteLine("Zehmet olmasa vaxti daxil edin (dd.mm.yyyy)");
             string strdate1 = Console.ReadLine();
-            Console.WriteLine("Please enter time (dd.mm.yyyy)");
+            Console.WriteLine("Zehmet olmasa vaxti daxil edin (dd.mm.yyyy)");
             string strdate2 = Console.ReadLine();
             DateTime date1 = DateTime.Parse(strdate1);
             DateTime date2 = DateTime.Parse(strdate2);
@@ -370,19 +370,19 @@ namespace C_sharp_console_project.Services
         {
             double price1 = 0;
             double price2 = 0;
-            Console.WriteLine("Please enter the start price");
+            Console.WriteLine("Zehmet olmasa baslangic qiymeti daxil edin");
             string strprice1 = Console.ReadLine();
             while (!double.TryParse(strprice1, out price1))
             {
-                Console.WriteLine("Please enter the correct number");
+                Console.WriteLine("Zehmet olmasa duzgun mebleg daxil edin");
                 strprice1 = Console.ReadLine();
 
             }
-            Console.WriteLine("Please enter the start price");
+            Console.WriteLine("Zehmet olmasa son deyer qiymeti daxil edin");
             string endprice2 = Console.ReadLine();
             while (!double.TryParse(endprice2, out price2))
             {
-                Console.WriteLine("Please enter the correct number");
+                Console.WriteLine("Zehmet olmasa duzgun mebleg daxil edin");
                 endprice2 = Console.ReadLine();
 
             }
@@ -396,7 +396,7 @@ namespace C_sharp_console_project.Services
         }
         public static void OneDaySale()
         {
-            Console.WriteLine("(Please enter time(dd.mm.yyyy))");
+            Console.WriteLine("(Zehmet olmasa vaxti daxil edin(dd.mm.yyyy))");
             string strday = Console.ReadLine();
             DateTime day = DateTime.Parse(strday);
             var table = new ConsoleTable("No", "Price", "Count", "Date");
@@ -410,11 +410,11 @@ namespace C_sharp_console_project.Services
         public static void TheNoSale() 
         {
             int no = 0;
-            Console.WriteLine("Please enter the No");
+            Console.WriteLine("Zehmet olmasa daxil edin No");
             string strno = Console.ReadLine();
             while (!int.TryParse (strno ,out no))
             {
-                Console.WriteLine("Please enter the No");
+                Console.WriteLine("Zehmet olmasa daxil edin No:");
                 strno = Console.ReadLine();
             }
             var table =new ConsoleTable("No", "Price", "Count", "Date");

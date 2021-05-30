@@ -37,15 +37,15 @@ namespace C_sharp_console_project
                                 Console.WriteLine("2 Mehsul uzerinde duzelis et");
                                 Console.WriteLine("3 Mehsulu sil");
                                 Console.WriteLine("4 Butun mehsullari goster");
-                                Console.WriteLine("5 Categoriyasina gore mehsullari goster");
+                                Console.WriteLine("5 Kategoriyasina gore mehsullari goster");
                                 Console.WriteLine("6 Qiymet araligina gore mehsullari goster");
-                                Console.WriteLine("7 Mehsullar arasinda ada gore axtaris et ");
+                                Console.WriteLine("7 Mehsullar arasinda Ada gore axtaris et ");
                                 Console.WriteLine("0-Exit");
-                                Console.WriteLine("Hansı əməliyyati etmək istəyirsiniz?");
+                                Console.WriteLine("Hansı emeliyyati etmek isteyirsiniz?");
                                 string selectionsl2 = Console.ReadLine();
                                 while (!int.TryParse(selectionsl2, out sl2))
                                 {
-                                    Console.WriteLine("Zehmət olmasa nomrəni daxil edin");
+                                    Console.WriteLine("Zehmət olmasa nomreni daxil edin");
                                     selectionsl2 = Console.ReadLine();
                                 }
                                 switch (sl2)
@@ -89,14 +89,14 @@ namespace C_sharp_console_project
                                 Console.WriteLine("6 Verilen mebleg araligina gore satislarin gosterilmesi ");
                                 Console.WriteLine("7 Verilmis bir tarixde olan satislarin gosterilmesi");
                                 Console.WriteLine("8 Verilmis nomreye esasen hemin nomreli satisin melumatlarinin gosterilmesi");
-                                Console.WriteLine("0 Çixiş");
+                                Console.WriteLine("0 Cixis");
                                 Console.WriteLine("=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*=*");
-                                Console.WriteLine("Hansı əməliyyatı etmək istəyirsiniz?");
+                                Console.WriteLine("Hansi emeliyyati etmek isteyirsiniz?");
 
                                 string selectionsl3 = Console.ReadLine();
                                 while (!int.TryParse(selectionsl3, out sl3))
                                 {
-                                    Console.WriteLine("Ədedi duzgun daxil edin");
+                                    Console.WriteLine("Ededi duzgun daxil edin");
                                     selectionsl3 = Console.ReadLine();
                                 }
                                 switch (sl3)

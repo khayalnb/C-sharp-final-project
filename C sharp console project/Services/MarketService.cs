@@ -36,28 +36,28 @@ namespace C_sharp_console_project.Services
             var change = Products.FirstOrDefault(i => i.No == a);
             do
             {
-                Console.WriteLine("1-Change the name");
-                Console.WriteLine("2-Change the category");
-                Console.WriteLine("3-Change the price");
-                Console.WriteLine("4-Change the count");
-                Console.WriteLine("5-Exit");
-                Console.WriteLine("What surgery do you want to do");
+                Console.WriteLine("1 Adi deyis");
+                Console.WriteLine("2 Kateqoriyani deyis");
+                Console.WriteLine("3 Qiymeti deyis");
+                Console.WriteLine("4 Sayi deyis");
+                Console.WriteLine("5 cixis");
+                Console.WriteLine("Hansı emeliyyat etmek istəyirsen?");
                 string strb = Console.ReadLine();
                 while (!int.TryParse(strb, out b))
                 {
-                    Console.WriteLine("Please enter number correct");
+                    Console.WriteLine("Zehmet olmasa duzgun reqem daxil edin");
                     strb = Console.ReadLine();
                 }
 
                 switch (b)
                 {
                     case 1:
-                        Console.WriteLine("Enter new name");
+                        Console.WriteLine("Adi daxil et");
                         string newname = Console.ReadLine();
                         change.ProductName = newname;
                         break;
                     case 2:
-                        Console.WriteLine("Enter new category");
+                        Console.WriteLine("Kateqoriyani daxil et");
                         Console.WriteLine("Categories");
                         int index = 1;
                         foreach(var item in Enum.GetValues(typeof(Category)))
@@ -90,21 +90,21 @@ namespace C_sharp_console_project.Services
                         }
                         break;
                     case 3:
-                        Console.WriteLine("Enter new price");
+                        Console.WriteLine("Meblegi daxil et");
                         string doubl = Console.ReadLine();
                         while (!double.TryParse(doubl, out c))
                         {
-                            Console.WriteLine("Please enter number correct");
+                            Console.WriteLine("Duzgun reqem daxil et");
                             doubl = Console.ReadLine();
                         }
                         change.Price = c;
                         break;
                     case 4:
-                        Console.WriteLine("Enter the new count");
+                        Console.WriteLine("Sayi daxil edin");
                         string newcount = Console.ReadLine();
                         while (!int.TryParse(newcount, out d))
                         {
-                            Console.WriteLine("Please enter number correct");
+                            Console.WriteLine("Duzgun reqem daxil et");
                             newcount = Console.ReadLine();
                         }
                         change.ProductCount = d;
