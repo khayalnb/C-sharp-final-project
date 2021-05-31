@@ -26,7 +26,13 @@ namespace C_sharp_console_project
                     string selectionsl1 = Console.ReadLine();
                     while (!int.TryParse(selectionsl1, out sl1))
                     {
+                        Console.WriteLine("Zehmet olmasa duzgun nomreni daxil edin:");
                         selectionsl1 = Console.ReadLine();
+                    }
+                    if (sl1<=0 || sl1>=4)
+                    {
+                        throw new ArgumentOutOfRangeException("Daxil etdiyiniz emeliyyat movcud deyil");
+
                     }
                     switch (sl1)
                     {
@@ -47,6 +53,11 @@ namespace C_sharp_console_project
                                 {
                                     Console.WriteLine("Zehmət olmasa nomreni daxil edin");
                                     selectionsl2 = Console.ReadLine();
+                                }
+                                if (sl2 <= -1 || sl2 >= 8)
+                                {
+                                    throw new ArgumentOutOfRangeException("Daxil etdiyiniz emeliyyat movcud deyil");
+
                                 }
                                 switch (sl2)
                                 {
@@ -98,6 +109,11 @@ namespace C_sharp_console_project
                                 {
                                     Console.WriteLine("Ededi duzgun daxil edin");
                                     selectionsl3 = Console.ReadLine();
+                                }
+                                if (sl3 <= -1 || sl3 >= 9)
+                                {
+                                    throw new ArgumentOutOfRangeException("Daxil etdiyiniz emeliyyat movcud deyil");
+
                                 }
                                 switch (sl3)
                                 {

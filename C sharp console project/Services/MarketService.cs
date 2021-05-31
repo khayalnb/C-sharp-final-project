@@ -34,6 +34,11 @@ namespace C_sharp_console_project.Services
             double c = 0;
             int d = 0;
             var change = Products.FirstOrDefault(i => i.No == a);
+            if (change==null)
+            {
+                throw new ArgumentNullException("Bele bir mehsul yoxdur");
+
+            }
             do
             {
                 Console.WriteLine("1 Adi deyis");
@@ -47,6 +52,11 @@ namespace C_sharp_console_project.Services
                 {
                     Console.WriteLine("Zehmet olmasa duzgun reqem daxil edin");
                     strb = Console.ReadLine();
+                }
+                if (b<=0 ||b>=6)
+                {
+                    throw new ArgumentOutOfRangeException("Daxil etdiyiniz emeliyyat movcud deyil");
+
                 }
 
                 switch (b)
@@ -66,7 +76,20 @@ namespace C_sharp_console_project.Services
                             index++;
 
                         }
-                        int pick = Convert.ToInt32(Console.ReadLine());
+                        int pick = 0;
+                        Console.WriteLine("Zehmet olmasa kateqoriyani secin");
+                        string strpick = Console.ReadLine();
+                        while(!int.TryParse(strpick,out pick))
+                        {
+                            Console.WriteLine("Zehmet olmasa duzgun reqem daxil edin");
+                            strpick = Console.ReadLine();
+                        }
+                        if (pick<=0 || pick>=6)
+                        {
+                            throw new ArgumentNullException("Daxil etdiyiniz kateqoriya movcud deyil");
+
+                        }
+
                         Category sort = new();
                         switch (pick)
                         {
@@ -118,6 +141,11 @@ namespace C_sharp_console_project.Services
         public void ClearProduct(int no)
         {
             int index = Products.FindIndex(a => a.No == no);
+            if (index==-1)
+            {
+                throw new ArgumentOutOfRangeException("Daxil etdiyiniz mehsul movcud deyil");
+
+            }
             Products.RemoveAt(index);
         }
         public List<Product> SerchforCategoryProduct(Category category)
@@ -141,8 +169,18 @@ namespace C_sharp_console_project.Services
             SaleItem saleItem = new();
 
             int index = Products.FindIndex(a => a.No == no);
+            if (index==-1)
+            {
+                throw new ArgumentOutOfRangeException("Daxil etdiyiniz mehsul movcud deyil");
+
+            }
             var result = Products.ElementAt(index);
             result.ProductCount = result.ProductCount - count;
+            if (result.ProductCount<0)
+            {
+                throw new ArgumentNullException("Daxil etdiyiniz sayda mehsul movcud deyil");
+
+            }
             double b = (double)(result.Price * count);
             sale.Price  += b;
             saleItem.products = result;
@@ -153,11 +191,26 @@ namespace C_sharp_console_project.Services
         public void ReturnofProduct(int no, string name, int count)
         {
             Sale sale = Sales.FirstOrDefault(a => a.No == no);
+            if (sale==null)
+            {
+                throw new ArgumentNullException("Daxil etdiyiniz satis movcud deyil");
+
+            }
             SaleItem saleitem = sale.Items.FirstOrDefault(a => a.Quantity >= count);
             Product product = Products.FirstOrDefault(a => a.ProductName == name);
+            if (product==null)
+            {
+                throw new ArgumentOutOfRangeException("Daxil etdiyiniz mehsul movcud deyil");
+
+            }
             sale.Items.Remove(saleitem);
             product.ProductCount += count;
             sale.Price -= product.Price * count;
+            if (saleitem.Quantity-count<=-1)
+            {
+                throw new ArgumentNullException("Daxil etdiyiniz satisda bu qeder mehsul movcud deyil");
+
+            }
             saleitem.Quantity -= count;
             sale.Items.Add(saleitem);
 
@@ -165,6 +218,11 @@ namespace C_sharp_console_project.Services
         public void DeleteSale(int no)
         {
             int index = Sales.FindIndex(a => a.No == no);
+            if (index==-1 )
+            {
+                throw new ArgumentNullException("Daxil etdiyiniz satis movcud deyil");
+
+            }
             Sales.RemoveAt(index);
         }
         public List<Sale> RangeOfDateSale(DateTime dates,DateTime datee)
@@ -185,6 +243,11 @@ namespace C_sharp_console_project.Services
         public List<Sale> TheNoSale(int no)
         {
             var result = Sales.FindAll(a => a.No == no);
+            if (result.Count==0)
+            {
+                throw new ArgumentNullException($"{no}  nomreli satis movcud deyil");
+
+            }
             return result.ToList();
         }
 

@@ -18,8 +18,6 @@ namespace C_sharp_console_project.Services
         
         public static void AddProduct()
         {
-            
-
             int count = 0;
             double price = 0;
             Console.WriteLine("Zehmet olmasa mehsulun adin daxil edin:");
@@ -35,10 +33,8 @@ namespace C_sharp_console_project.Services
             int index = 1;
             foreach (var item in Enum.GetValues(typeof(Category)))
             {
-
                 Console.WriteLine($"{index}. {item}");
                 index++;
-
             }
 
             int pick = Convert.ToInt32(Console.ReadLine());
