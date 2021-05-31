@@ -91,6 +91,7 @@ namespace C_sharp_console_project.Services
                         }
 
                         Category sort = new();
+
                         switch (pick)
                         {
                             case (int)Category.Cake:

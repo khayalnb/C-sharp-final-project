@@ -22,6 +22,11 @@ namespace C_sharp_console_project.Services
             double price = 0;
             Console.WriteLine("Zehmet olmasa mehsulun adin daxil edin:");
             string name = Console.ReadLine();
+            if (name==null)
+            {
+                throw new ArgumentNullException("mehsulun adin daxil edin");
+
+            }
             Console.WriteLine("Zehmet olmasa mehsulun qiymetin daxil edin:");
             string pricestr = Console.ReadLine();
             while (!double.TryParse(pricestr, out price))
@@ -30,6 +35,11 @@ namespace C_sharp_console_project.Services
                 pricestr = Console.ReadLine();
             }
             Console.WriteLine("Zehmet olmasa mehsulun kategoriyasın daxil edin:");
+            if (price<=0)
+            {
+                throw new ArgumentOutOfRangeException("Daxil etdiyiniz mebleg menfi ola bilmez");
+
+            }
             int index = 1;
             foreach (var item in Enum.GetValues(typeof(Category)))
             {
@@ -37,7 +47,13 @@ namespace C_sharp_console_project.Services
                 index++;
             }
 
-            int pick = Convert.ToInt32(Console.ReadLine());
+            int pick = 0;
+            string strpick = Console.ReadLine();
+            while (!int.TryParse(strpick, out pick)) 
+            {
+                Console.WriteLine("Zehmet olmasa duzgun reqem daxil edin");
+                strpick = Console.ReadLine();
+            }
             Category sort = new();
             switch (pick)
             {
@@ -64,12 +80,21 @@ namespace C_sharp_console_project.Services
                 default:
                     break;
             }
+            if (pick>=6 || pick<=6)
+            {
+                throw new ArgumentNullException("Daxil etdiyiniz kateqoriya movcud deyil");
+
+            }
             Console.WriteLine("Zehmet olmasa mehsul sayını daxil edin");
             string countstr = Console.ReadLine();
             while (!Int32.TryParse(countstr, out count))
             {
                 Console.WriteLine("Zehmet olmasa duzgun nomreni daxil edin");
                 countstr = Console.ReadLine();
+            }
+            if (count<=0)
+            {
+                throw new ArgumentOutOfRangeException("Mehsulun sayi menfi ola bilmez");
             }
             marketservice.AddProduct(name, price, count, sort);
 
@@ -144,6 +169,11 @@ namespace C_sharp_console_project.Services
                 Console.WriteLine("Zehmet olmasa duzgun nomreni daxil edin");
                 strpick = Console.ReadLine();
             }
+            if (pick<=0 || pick>=6)
+            {
+                throw new ArgumentNullException("daxil etdiyiniz kateqoriya movcud deyil");
+
+            }
             Category sort = new();
             switch (pick)
             {
@@ -193,12 +223,22 @@ namespace C_sharp_console_project.Services
                 Console.WriteLine("Zehmet olmasa meblegi duzgun daxil edin:");
                 strstartprice = Console.ReadLine();
             }
+            if (startprice<= 0)
+            {
+                throw new ArgumentOutOfRangeException("Mehsulun qiymeti menfi ola bilmez");
+            }
+            
             Console.WriteLine("Zehmet olmasa son deyer meblegin daxil edin:");
             string strendprice = Console.ReadLine();
             while (!double.TryParse(strendprice, out endprice))
             {
                 Console.WriteLine("Zehmet olmasa meblegi duzgun daxil edin:");
                 strendprice = Console.ReadLine();
+            }
+            if (endprice<=0)
+            {
+                throw new ArgumentOutOfRangeException("Mehsulun qiymeti menfi ola bilmez");
+
             }
             var table = new ConsoleTable("No", "Name", "Category", "Price", "Count");
             foreach (var products in marketservice.SearchforPriceProduct(startprice, endprice))
@@ -235,6 +275,11 @@ namespace C_sharp_console_project.Services
                 {
                     Console.WriteLine("Ededi duz daxil edin");
                     strsell = Console.ReadLine();
+
+                }
+                if (sell<=0 ||sell>=3)
+                {
+                    throw new ArgumentOutOfRangeException("Daxil etdiyiniz emeliyyat mevcud deyil");
 
                 }
                 switch (sell)
@@ -425,3 +470,4 @@ namespace C_sharp_console_project.Services
 
     }
 }
+

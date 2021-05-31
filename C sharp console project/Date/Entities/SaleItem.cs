@@ -9,9 +9,7 @@ namespace C_sharp_console_project.Date.Entities
 {
     class SaleItem : BaseEntity
     {
-        public static int count = 0;
-
-        
+        private static int count = 0; 
         public Product products { get; set; }
         public int Quantity { get; set; }
         

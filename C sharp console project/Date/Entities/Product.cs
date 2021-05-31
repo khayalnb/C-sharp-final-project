@@ -21,8 +21,7 @@ namespace C_sharp_console_project.Date.Entities
     }
     class Product :BaseEntity
     {
-        public static int count = 0;
-
+        private static int count = 0;
         public string ProductName { get; set; }
         public double Price { get; set; }
         public Category Categories { get; set; }
