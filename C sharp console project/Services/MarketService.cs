@@ -84,7 +84,7 @@ namespace C_sharp_console_project.Services
                             Console.WriteLine("Zehmet olmasa duzgun reqem daxil edin");
                             strpick = Console.ReadLine();
                         }
-                        if (pick<=0 || pick>=6)
+                        if (pick <= 0 || pick >= 6)
                         {
                             throw new ArgumentNullException("Daxil etdiyiniz kateqoriya movcud deyil");
 
@@ -100,11 +100,11 @@ namespace C_sharp_console_project.Services
                             case(int)Category.Chocolate:
                                 sort = Category.Chocolate;
                                 break;
-                            case (int)Category.Drink:
-                                sort = Category.Drink;
-                                break;
                             case (int)Category.Fruit:
                                 sort = Category.Fruit;
+                                break;
+                            case (int)Category.Drink:
+                                sort = Category.Drink;
                                 break;
                             case (int)Category.Tea:
                                 sort = Category.Tea;

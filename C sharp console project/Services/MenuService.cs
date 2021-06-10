@@ -80,12 +80,12 @@ namespace C_sharp_console_project.Services
                 default:
                     break;
             }
-            if (pick>=6 || pick<=6)
+            if (pick>=6 || pick<=0)
             {
                 throw new ArgumentNullException("Daxil etdiyiniz kateqoriya movcud deyil");
 
             }
-            Console.WriteLine("Zehmet olmasa mehsul sayını daxil edin");
+            Console.WriteLine("Zehmet olmasa mehsul sayini daxil edin");
             string countstr = Console.ReadLine();
             while (!Int32.TryParse(countstr, out count))
             {
@@ -169,7 +169,7 @@ namespace C_sharp_console_project.Services
                 Console.WriteLine("Zehmet olmasa duzgun nomreni daxil edin");
                 strpick = Console.ReadLine();
             }
-            if (pick<=0 || pick>=6)
+            if (pick <= 0 && pick >= 6)
             {
                 throw new ArgumentNullException("daxil etdiyiniz kateqoriya movcud deyil");
 
